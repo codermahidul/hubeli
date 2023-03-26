@@ -34,4 +34,232 @@ a {
     padding: 0;
 }
 
+/* Variable */
+:root{
+    --primaryColor: #EBB02D;
+    --secondaryColor: #159895;
+    --hoverColor: #cb931c;
+    --whiteColor: #ffffff;
+    --blackColor: #2C3333;
+    --headingFont: 'Russo One', sans-serif;
+    --paragrapFont: 'Roboto', sans-serif;
+    --stylisFont: 'Montez', cursive;
+}
 
+/* Google Font */
+ @import url('https://fonts.googleapis.com/css2?family=Montez&family=Roboto:wght@100;300;400;500;700;900&family=Russo+One&display=swap');
+/* Google Font */
+
+/* MAIN MENU START */
+#mainMenu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#mainMenu .navbar .navbar-brand{
+    font-family: var(--stylisFont);
+    color: var(--whiteColor);
+    font-size: 24px;
+}
+
+#mainMenu .navbar .navbar-nav .nav-item{
+    margin: 0 15px;
+}
+
+#mainMenu .navbar .navbar-nav .nav-item .nav-link{
+    font-family: var(--stylisFont);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--whiteColor);
+    text-transform: uppercase;
+    position: relative;
+    padding: 0;
+    transition: all linear .3s;
+}
+
+#mainMenu .navbar .navbar-nav .nav-item .nav-link::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primaryColor);
+    transition: all linear .3s;
+}
+
+
+#mainMenu .navbar .navbar-nav .nav-item .nav-link:hover::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primaryColor);
+}
+
+#mainMenu .navbar .navbar-nav .nav-item .nav-link:hover{
+    color: var(--primaryColor);
+}
+
+#mainMenu .navbar .navbar-nav .nav-item .nav-link.active{
+    color: var(--primaryColor);
+}
+
+#mainMenu .anotherMenu{
+    margin-top: 15px;
+}
+
+#mainMenu .anotherMenu ul {
+    display: flex;
+    align-items: center;
+}
+
+#mainMenu .anotherMenu ul li{
+    margin: 0 15px;
+}
+
+#mainMenu .anotherMenu ul li:last-child{
+    margin-right: 0;
+}
+
+#mainMenu .anotherMenu ul li a{
+
+}
+
+#mainMenu .anotherMenu ul li a.signUp{
+    background: #EBB02D;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all linear .3s;
+}
+
+#mainMenu .anotherMenu ul li a:hover.signUp{
+    background: #cb931c;
+}
+
+#mainMenu .anotherMenu ul li a i{
+    color: var(--whiteColor);
+    font-size: 18px;
+}
+
+#mainMenu .anotherMenu ul li form{
+    position: relative;
+}
+
+#mainMenu .anotherMenu ul li form button{
+    color: var(--whiteColor);
+    font-size: 18px;
+    background: none;
+    border: none;
+}
+
+#mainMenu .anotherMenu ul li form input {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid var(--blackColor);
+    transition: all linear .3s;
+    visibility: hidden;
+}
+
+#mainMenu .anotherMenu ul li form:hover input {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline;
+    visibility: visible;
+}
+
+
+/* MAIN MENU END */
+
+/* BANNER START */
+#banner{
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+    position: absolute;
+}
+
+#banner .overly{
+    background: rgb(21,152,149);
+    background: linear-gradient(90deg, rgba(21,152,149,0.938813025210084) 34%, rgba(21,152,149,0) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+#banner .content_wraper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+}
+
+#banner .content_wraper h1{
+    font-family: var(--stylisFont);
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--whiteColor);
+}
+
+#banner .content_wraper p{
+    font-family: var(--paragrapFont);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--whiteColor);
+    margin-top: 20px;
+}
+
+#banner .content_wraper a{
+    font-family: var(--headingFont);
+    color: var(--whiteColor);
+    margin-top: 25px;
+    background: var(--primaryColor);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all linear .3s;
+}
+
+#banner .content_wraper a:hover{
+    background: var(--hoverColor);
+}
+
+#banner .content_wraper a.play{
+    margin-left: 30px;
+    background: none;
+}
+
+#banner .content_wraper a.play i{
+    margin-right: 15px;
+    position: relative;
+}
+
+#banner .content_wraper a.play i::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--whiteColor);
+}
+
+/* BANNER END */
